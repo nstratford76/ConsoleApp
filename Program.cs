@@ -24,7 +24,15 @@ namespace ConsoleApp
 
             var currentDate = DateTime.Now;
             Console.WriteLine("The current date is: " + currentDate.ToShortDateString());
+           
 
+            var date = DateTime.UtcNow.ToString("MM-dd-yyyy");
+            Console.WriteLine("The current date is {0}", date);
+            var christmas = new DateTime(2020, 12, 25);
+            var span = christmas - currentDate;
+            var daysToChristmas = span.Days;
+
+            Console.WriteLine("There are " + daysToChristmas + " days left until Christmas!");
 
             double width, height, woodLength, glassArea;
             string widthString, heightString;
